@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>User Registration Form</title>
+       <style>
+
+        form{
+            padding: 40px;
+            background-color: lightblue;
+            width:35%;
+            
+            text-align: center;
+            border-radius:8px;
+            margin:auto;
+
+        }
+        div{
+            padding:10px;
+            text-align:justify;
+
+        }
+
+        input{
+
+            width:80%;
+            margin: 0px 10px;
+        }
+
+        label{
+
+            margin: 0px 10px;
+        }
+
+       </style>
+
+
+    </head>
+    <body>
+        
+        <form action='' method='post'>
+            {% csrf_token %}
+        
+            <h3>User Registration Form</h3>
+            <div>
+            <label for='username'>Username:</label><br>
+            <input type='text' id='username' name='username' placeholder='Create a username(Alphabets and Numbers)' required>
+            <br><br>
+
+            <label for='fname'>First Name:</label><br>
+            <input type='text' id='fname' name='fname' placeholder='Enter your First Name' required>
+            <br><br>
+
+            <label for='lname'>Last Name:</label><br>
+            <input type='text' id='lname' name='lname' placeholder='Enter your Last Name' required>
+            <br><br>
+        
+            <label for='email'>Email Id:</label><br>
+            <input type='email' id='email' name='email' placeholder='Enter your Email Id' required>
+            <br><br>
+        
+            <label for='pass1'>Password:</label><br>
+            <input type='Password' id='pass1' name='pass1' placeholder='Create a Password' required>
+            <br><br>
+        
+            <label for='pass2'>Confirm Your Password:</label><br>
+            <input type='Password' id='pass2' name='pass2' placeholder='Confirm your Password' required>
+            <br><br>
+            </div>
+            <button type='submit'>SignUp</button>
+            <br><br>
+            <a href="login" >I already have an account</a>
+            
+            
+
+        </body>
+        </form>
+        
+    </body>
+</html>
